@@ -1,4 +1,4 @@
-const keysBtn = [
+const keyBtn = [
     {
         codeS: 'Backquote',
         ru: 'ё',
@@ -442,4 +442,4 @@ const keysBtn = [
     },
 ];
 
-export default keysBtn;
+export default keyBtn;
