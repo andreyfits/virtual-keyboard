@@ -1267,25 +1267,25 @@ document.addEventListener('keydown', function (event) {
         if (el.id === event.code) {
             el.classList.add('active');
             if (el.id === 'Tab') {
-                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '    ';
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '\t';
             } else if (el.id === 'CapsLock') {
                 isCapsOn = !isCapsOn;
                 createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
-                keys.forEach((el) => {
-                    if (el.id === event.code && isCapsOn) {
-                        el.classList.add('active');
+                keys.forEach((elem) => {
+                    if (elem.id === event.code && isCapsOn) {
+                        elem.classList.add('active');
                     }
                 });
             } else if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
                 isShiftOn = true;
                 createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
-                keys.forEach((el) => {
-                    if (el.id === event.code) {
-                        el.classList.add('active');
-                    } else if (el.id === 'CapsLock' && isCapsOn) {
-                        el.classList.add('active');
+                keys.forEach((elem) => {
+                    if (elem.id === event.code) {
+                        elem.classList.add('active');
+                    } else if (elem.id === 'CapsLock' && isCapsOn) {
+                        elem.classList.add('active');
                     }
                 });
             } else if (el.id === 'ControlLeft' || el.id === 'ControlRight') {
@@ -1371,7 +1371,7 @@ _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('moused
         if (el === event.target) {
             el.classList.add('active');
             if (el.id === 'Tab') {
-                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '    ';
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '\t';
             } else if (el.id === 'CapsLock') {
                 isCapsOn = !isCapsOn;
                 createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -1434,4 +1434,4 @@ _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mouseu
 
 /******/ })()
 ;
-//# sourceMappingURL=main.faae75616d8d08652e01.js.map
+//# sourceMappingURL=main.636b9c0ad01867a9e71e.js.map
