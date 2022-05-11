@@ -30,8 +30,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: '[name].[contenthash].js',
-        assetModuleFilename: 'assets/[hash][ext][query]',
-        clean: true,
+        clean: {
+            keep: /\.git/,
+        },
     },
     devServer: {
         open: true,

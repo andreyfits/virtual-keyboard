@@ -5,6 +5,7 @@ const keyBtn = [
         RU: 'Ё',
         en: '`',
         EN: '~',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Digit1',
@@ -12,6 +13,7 @@ const keyBtn = [
         RU: '!',
         en: '1',
         EN: '!',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit2',
@@ -19,6 +21,7 @@ const keyBtn = [
         RU: '"',
         en: '2',
         EN: '@',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit3',
@@ -26,6 +29,7 @@ const keyBtn = [
         RU: '№',
         en: '3',
         EN: '#',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit4',
@@ -33,6 +37,7 @@ const keyBtn = [
         RU: ';',
         en: '4',
         EN: '$',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit5',
@@ -40,6 +45,7 @@ const keyBtn = [
         RU: '%',
         en: '5',
         EN: '%',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit6',
@@ -47,6 +53,7 @@ const keyBtn = [
         RU: ':',
         en: '6',
         EN: '^',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit7',
@@ -54,6 +61,7 @@ const keyBtn = [
         RU: '?',
         en: '7',
         EN: '&',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit8',
@@ -61,6 +69,7 @@ const keyBtn = [
         RU: '*',
         en: '8',
         EN: '*',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit9',
@@ -68,6 +77,7 @@ const keyBtn = [
         RU: '(',
         en: '9',
         EN: '(',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit0',
@@ -75,6 +85,7 @@ const keyBtn = [
         RU: ')',
         en: '0',
         EN: ')',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Minus',
@@ -82,6 +93,7 @@ const keyBtn = [
         RU: '_',
         en: '-',
         EN: '_',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Equal',
@@ -89,6 +101,7 @@ const keyBtn = [
         RU: '+',
         en: '=',
         EN: '+',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Backspace',
@@ -96,6 +109,7 @@ const keyBtn = [
         RU: '⬅',
         en: '⬅',
         EN: '⬅',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Tab',
@@ -103,6 +117,7 @@ const keyBtn = [
         RU: 'Tab',
         en: 'Tab',
         EN: 'Tab',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'KeyQ',
@@ -110,6 +125,7 @@ const keyBtn = [
         RU: 'Й',
         en: 'q',
         EN: 'Q',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyW',
@@ -117,6 +133,7 @@ const keyBtn = [
         RU: 'Ц',
         en: 'w',
         EN: 'W',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyE',
@@ -124,6 +141,7 @@ const keyBtn = [
         RU: 'У',
         en: 'e',
         EN: 'E',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyR',
@@ -131,6 +149,7 @@ const keyBtn = [
         RU: 'К',
         en: 'r',
         EN: 'R',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyT',
@@ -138,6 +157,7 @@ const keyBtn = [
         RU: 'Е',
         en: 't',
         EN: 'T',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyY',
@@ -145,6 +165,7 @@ const keyBtn = [
         RU: 'Н',
         en: 'y',
         EN: 'Y',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyU',
@@ -152,6 +173,7 @@ const keyBtn = [
         RU: 'Г',
         en: 'u',
         EN: 'U',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyI',
@@ -159,6 +181,7 @@ const keyBtn = [
         RU: 'Ш',
         en: 'i',
         EN: 'I',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyO',
@@ -166,6 +189,7 @@ const keyBtn = [
         RU: 'Щ',
         en: 'o',
         EN: 'O',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyP',
@@ -173,13 +197,16 @@ const keyBtn = [
         RU: 'З',
         en: 'p',
         EN: 'P',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'BracketLeft',
         ru: 'х',
         RU: 'Х',
         en: '[',
+        en2: false,
         EN: '{',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'BracketRight',
@@ -187,6 +214,7 @@ const keyBtn = [
         RU: 'Ъ',
         en: ']',
         EN: '}',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Backslash',
@@ -194,6 +222,7 @@ const keyBtn = [
         RU: '/',
         en: '\\',
         EN: '|',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Delete',
@@ -201,6 +230,7 @@ const keyBtn = [
         RU: 'Del',
         en: 'Del',
         EN: 'Del',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'CapsLock',
@@ -208,6 +238,7 @@ const keyBtn = [
         RU: 'CapsLk',
         en: 'CapsLk',
         EN: 'CapsLk',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'KeyA',
@@ -215,6 +246,7 @@ const keyBtn = [
         RU: 'Ф',
         en: 'a',
         EN: 'A',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyS',
@@ -222,6 +254,7 @@ const keyBtn = [
         RU: 'Ы',
         en: 's',
         EN: 'S',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyD',
@@ -229,6 +262,7 @@ const keyBtn = [
         RU: 'В',
         en: 'd',
         EN: 'D',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyF',
@@ -236,6 +270,7 @@ const keyBtn = [
         RU: 'А',
         en: 'f',
         EN: 'F',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyG',
@@ -243,6 +278,7 @@ const keyBtn = [
         RU: 'П',
         en: 'g',
         EN: 'G',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyH',
@@ -250,6 +286,7 @@ const keyBtn = [
         RU: 'Р',
         en: 'h',
         EN: 'H',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyJ',
@@ -257,6 +294,7 @@ const keyBtn = [
         RU: 'О',
         en: 'j',
         EN: 'J',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyK',
@@ -264,6 +302,7 @@ const keyBtn = [
         RU: 'Л',
         en: 'k',
         EN: 'K',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyL',
@@ -271,6 +310,7 @@ const keyBtn = [
         RU: 'Д',
         en: 'l',
         EN: 'L',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Semicolon',
@@ -278,6 +318,7 @@ const keyBtn = [
         RU: 'Ж',
         en: ';',
         EN: ':',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Quote',
@@ -285,6 +326,7 @@ const keyBtn = [
         RU: 'Э',
         en: '\'',
         EN: '"',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Enter',
@@ -292,6 +334,7 @@ const keyBtn = [
         RU: 'Enter',
         en: 'Enter',
         EN: 'Enter',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ShiftLeft',
@@ -299,6 +342,7 @@ const keyBtn = [
         RU: 'Shift',
         en: 'Shift',
         EN: 'Shift',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'KeyZ',
@@ -306,6 +350,7 @@ const keyBtn = [
         RU: 'Я',
         en: 'z',
         EN: 'Z',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyX',
@@ -313,6 +358,7 @@ const keyBtn = [
         RU: 'Ч',
         en: 'x',
         EN: 'X',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyC',
@@ -320,6 +366,7 @@ const keyBtn = [
         RU: 'С',
         en: 'c',
         EN: 'C',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyV',
@@ -327,6 +374,7 @@ const keyBtn = [
         RU: 'М',
         en: 'v',
         EN: 'V',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyB',
@@ -334,6 +382,7 @@ const keyBtn = [
         RU: 'И',
         en: 'b',
         EN: 'B',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyN',
@@ -341,13 +390,15 @@ const keyBtn = [
         RU: 'Т',
         en: 'n',
         EN: 'N',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyM',
         ru: 'ь',
         RU: 'Ь',
-        en: 'm`',
+        en: 'm',
         EN: 'M',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Comma',
@@ -355,6 +406,7 @@ const keyBtn = [
         RU: 'Б',
         en: ',',
         EN: '<',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Period',
@@ -362,6 +414,7 @@ const keyBtn = [
         RU: 'Ю',
         en: '.',
         EN: '>',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Slash',
@@ -369,6 +422,7 @@ const keyBtn = [
         RU: ',',
         en: '/',
         EN: '?',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowUp',
@@ -376,6 +430,7 @@ const keyBtn = [
         RU: '↑',
         en: '↑',
         EN: '↑',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ShiftRight',
@@ -383,6 +438,7 @@ const keyBtn = [
         RU: 'Shift',
         en: 'Shift',
         EN: 'Shift',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ControlLeft',
@@ -390,6 +446,7 @@ const keyBtn = [
         RU: 'Ctrl',
         en: 'Ctrl',
         EN: 'Ctrl',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'MetaLeft',
@@ -397,6 +454,7 @@ const keyBtn = [
         RU: 'Win',
         en: 'Win',
         EN: 'Win',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'AltLeft',
@@ -404,6 +462,7 @@ const keyBtn = [
         RU: 'Alt',
         en: 'Alt',
         EN: 'Alt',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Space',
@@ -411,6 +470,7 @@ const keyBtn = [
         RU: ' ',
         en: ' ',
         EN: ' ',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'AltRight',
@@ -418,6 +478,7 @@ const keyBtn = [
         RU: 'Alt',
         en: 'Alt',
         EN: 'Alt',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowLeft',
@@ -425,6 +486,7 @@ const keyBtn = [
         RU: '←',
         en: '←',
         EN: '←',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowDown',
@@ -432,6 +494,7 @@ const keyBtn = [
         RU: '↓',
         en: '↓',
         EN: '↓',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowRight',
@@ -439,6 +502,7 @@ const keyBtn = [
         RU: '→',
         en: '→',
         EN: '→',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ControlRight',
@@ -446,7 +510,8 @@ const keyBtn = [
         RU: 'Ctrl',
         en: 'Ctrl',
         EN: 'Ctrl',
-    },
+        perceivesCapsLk: false,
+    }
 ];
 
 export default keyBtn;

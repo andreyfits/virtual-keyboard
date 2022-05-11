@@ -547,6 +547,7 @@ const keyBtn = [
         RU: 'Ё',
         en: '`',
         EN: '~',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Digit1',
@@ -554,6 +555,7 @@ const keyBtn = [
         RU: '!',
         en: '1',
         EN: '!',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit2',
@@ -561,6 +563,7 @@ const keyBtn = [
         RU: '"',
         en: '2',
         EN: '@',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit3',
@@ -568,6 +571,7 @@ const keyBtn = [
         RU: '№',
         en: '3',
         EN: '#',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit4',
@@ -575,6 +579,7 @@ const keyBtn = [
         RU: ';',
         en: '4',
         EN: '$',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit5',
@@ -582,6 +587,7 @@ const keyBtn = [
         RU: '%',
         en: '5',
         EN: '%',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit6',
@@ -589,6 +595,7 @@ const keyBtn = [
         RU: ':',
         en: '6',
         EN: '^',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit7',
@@ -596,6 +603,7 @@ const keyBtn = [
         RU: '?',
         en: '7',
         EN: '&',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit8',
@@ -603,6 +611,7 @@ const keyBtn = [
         RU: '*',
         en: '8',
         EN: '*',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit9',
@@ -610,6 +619,7 @@ const keyBtn = [
         RU: '(',
         en: '9',
         EN: '(',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Digit0',
@@ -617,6 +627,7 @@ const keyBtn = [
         RU: ')',
         en: '0',
         EN: ')',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Minus',
@@ -624,6 +635,7 @@ const keyBtn = [
         RU: '_',
         en: '-',
         EN: '_',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Equal',
@@ -631,6 +643,7 @@ const keyBtn = [
         RU: '+',
         en: '=',
         EN: '+',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Backspace',
@@ -638,6 +651,7 @@ const keyBtn = [
         RU: '⬅',
         en: '⬅',
         EN: '⬅',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Tab',
@@ -645,6 +659,7 @@ const keyBtn = [
         RU: 'Tab',
         en: 'Tab',
         EN: 'Tab',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'KeyQ',
@@ -652,6 +667,7 @@ const keyBtn = [
         RU: 'Й',
         en: 'q',
         EN: 'Q',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyW',
@@ -659,6 +675,7 @@ const keyBtn = [
         RU: 'Ц',
         en: 'w',
         EN: 'W',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyE',
@@ -666,6 +683,7 @@ const keyBtn = [
         RU: 'У',
         en: 'e',
         EN: 'E',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyR',
@@ -673,6 +691,7 @@ const keyBtn = [
         RU: 'К',
         en: 'r',
         EN: 'R',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyT',
@@ -680,6 +699,7 @@ const keyBtn = [
         RU: 'Е',
         en: 't',
         EN: 'T',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyY',
@@ -687,6 +707,7 @@ const keyBtn = [
         RU: 'Н',
         en: 'y',
         EN: 'Y',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyU',
@@ -694,6 +715,7 @@ const keyBtn = [
         RU: 'Г',
         en: 'u',
         EN: 'U',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyI',
@@ -701,6 +723,7 @@ const keyBtn = [
         RU: 'Ш',
         en: 'i',
         EN: 'I',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyO',
@@ -708,6 +731,7 @@ const keyBtn = [
         RU: 'Щ',
         en: 'o',
         EN: 'O',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyP',
@@ -715,13 +739,16 @@ const keyBtn = [
         RU: 'З',
         en: 'p',
         EN: 'P',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'BracketLeft',
         ru: 'х',
         RU: 'Х',
         en: '[',
+        en2: false,
         EN: '{',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'BracketRight',
@@ -729,6 +756,7 @@ const keyBtn = [
         RU: 'Ъ',
         en: ']',
         EN: '}',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Backslash',
@@ -736,6 +764,7 @@ const keyBtn = [
         RU: '/',
         en: '\\',
         EN: '|',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Delete',
@@ -743,6 +772,7 @@ const keyBtn = [
         RU: 'Del',
         en: 'Del',
         EN: 'Del',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'CapsLock',
@@ -750,6 +780,7 @@ const keyBtn = [
         RU: 'CapsLk',
         en: 'CapsLk',
         EN: 'CapsLk',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'KeyA',
@@ -757,6 +788,7 @@ const keyBtn = [
         RU: 'Ф',
         en: 'a',
         EN: 'A',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyS',
@@ -764,6 +796,7 @@ const keyBtn = [
         RU: 'Ы',
         en: 's',
         EN: 'S',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyD',
@@ -771,6 +804,7 @@ const keyBtn = [
         RU: 'В',
         en: 'd',
         EN: 'D',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyF',
@@ -778,6 +812,7 @@ const keyBtn = [
         RU: 'А',
         en: 'f',
         EN: 'F',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyG',
@@ -785,6 +820,7 @@ const keyBtn = [
         RU: 'П',
         en: 'g',
         EN: 'G',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyH',
@@ -792,6 +828,7 @@ const keyBtn = [
         RU: 'Р',
         en: 'h',
         EN: 'H',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyJ',
@@ -799,6 +836,7 @@ const keyBtn = [
         RU: 'О',
         en: 'j',
         EN: 'J',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyK',
@@ -806,6 +844,7 @@ const keyBtn = [
         RU: 'Л',
         en: 'k',
         EN: 'K',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyL',
@@ -813,6 +852,7 @@ const keyBtn = [
         RU: 'Д',
         en: 'l',
         EN: 'L',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Semicolon',
@@ -820,6 +860,7 @@ const keyBtn = [
         RU: 'Ж',
         en: ';',
         EN: ':',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Quote',
@@ -827,6 +868,7 @@ const keyBtn = [
         RU: 'Э',
         en: '\'',
         EN: '"',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Enter',
@@ -834,6 +876,7 @@ const keyBtn = [
         RU: 'Enter',
         en: 'Enter',
         EN: 'Enter',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ShiftLeft',
@@ -841,6 +884,7 @@ const keyBtn = [
         RU: 'Shift',
         en: 'Shift',
         EN: 'Shift',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'KeyZ',
@@ -848,6 +892,7 @@ const keyBtn = [
         RU: 'Я',
         en: 'z',
         EN: 'Z',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyX',
@@ -855,6 +900,7 @@ const keyBtn = [
         RU: 'Ч',
         en: 'x',
         EN: 'X',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyC',
@@ -862,6 +908,7 @@ const keyBtn = [
         RU: 'С',
         en: 'c',
         EN: 'C',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyV',
@@ -869,6 +916,7 @@ const keyBtn = [
         RU: 'М',
         en: 'v',
         EN: 'V',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyB',
@@ -876,6 +924,7 @@ const keyBtn = [
         RU: 'И',
         en: 'b',
         EN: 'B',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyN',
@@ -883,13 +932,15 @@ const keyBtn = [
         RU: 'Т',
         en: 'n',
         EN: 'N',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'KeyM',
         ru: 'ь',
         RU: 'Ь',
-        en: 'm`',
+        en: 'm',
         EN: 'M',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Comma',
@@ -897,6 +948,7 @@ const keyBtn = [
         RU: 'Б',
         en: ',',
         EN: '<',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Period',
@@ -904,6 +956,7 @@ const keyBtn = [
         RU: 'Ю',
         en: '.',
         EN: '>',
+        perceivesCapsLk: true,
     },
     {
         keyCode: 'Slash',
@@ -911,6 +964,7 @@ const keyBtn = [
         RU: ',',
         en: '/',
         EN: '?',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowUp',
@@ -918,6 +972,7 @@ const keyBtn = [
         RU: '↑',
         en: '↑',
         EN: '↑',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ShiftRight',
@@ -925,6 +980,7 @@ const keyBtn = [
         RU: 'Shift',
         en: 'Shift',
         EN: 'Shift',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ControlLeft',
@@ -932,6 +988,7 @@ const keyBtn = [
         RU: 'Ctrl',
         en: 'Ctrl',
         EN: 'Ctrl',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'MetaLeft',
@@ -939,6 +996,7 @@ const keyBtn = [
         RU: 'Win',
         en: 'Win',
         EN: 'Win',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'AltLeft',
@@ -946,6 +1004,7 @@ const keyBtn = [
         RU: 'Alt',
         en: 'Alt',
         EN: 'Alt',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'Space',
@@ -953,6 +1012,7 @@ const keyBtn = [
         RU: ' ',
         en: ' ',
         EN: ' ',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'AltRight',
@@ -960,6 +1020,7 @@ const keyBtn = [
         RU: 'Alt',
         en: 'Alt',
         EN: 'Alt',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowLeft',
@@ -967,6 +1028,7 @@ const keyBtn = [
         RU: '←',
         en: '←',
         EN: '←',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowDown',
@@ -974,6 +1036,7 @@ const keyBtn = [
         RU: '↓',
         en: '↓',
         EN: '↓',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ArrowRight',
@@ -981,6 +1044,7 @@ const keyBtn = [
         RU: '→',
         en: '→',
         EN: '→',
+        perceivesCapsLk: false,
     },
     {
         keyCode: 'ControlRight',
@@ -988,10 +1052,55 @@ const keyBtn = [
         RU: 'Ctrl',
         en: 'Ctrl',
         EN: 'Ctrl',
-    },
+        perceivesCapsLk: false,
+    }
 ];
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (keyBtn);
+
+
+/***/ }),
+
+/***/ "./src/assets/js/layout.js":
+/*!*********************************!*\
+  !*** ./src/assets/js/layout.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "keyboard": () => (/* binding */ keyboard),
+/* harmony export */   "textarea": () => (/* binding */ textarea)
+/* harmony export */ });
+/* CREATE SCREEN, KEYBOARD AND DESCRIPTION */
+const main = document.createElement('main');
+main.classList.add('main');
+main.classList.add('main-container');
+document.body.append(main);
+
+const textarea = document.createElement('textarea');
+textarea.className = 'textarea';
+textarea.name = 'display';
+textarea.autofocus = true;
+document.body.append(textarea);
+
+const keyboard = document.createElement('div');
+keyboard.className = 'keyboard';
+document.body.append(keyboard);
+
+const guide = document.createElement('p');
+guide.className = 'desc';
+guide.innerHTML = 'Для смены языка нажмите Ctrl + Alt <br> Клавиатура писалась на Linux Ubuntu';
+document.body.append(guide);
+
+const heading = document.createElement('h1');
+heading.textContent = 'RSS Virtual Keyboard';
+main.appendChild(heading);
+main.appendChild(textarea);
+main.appendChild(keyboard);
+main.appendChild(guide);
+
+
 
 
 /***/ })
@@ -1072,7 +1181,9 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
-/* harmony import */ var _assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/js/keyMap.js */ "./src/assets/js/keyMap.js");
+/* harmony import */ var _assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/js/keyMap */ "./src/assets/js/keyMap.js");
+/* harmony import */ var _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/js/layout */ "./src/assets/js/layout.js");
+
 
 
 
@@ -1086,44 +1197,21 @@ if (localStorage.getItem('lang') === 'en') {
     lang = 'en';
 }
 
-/*********** CREATE SCREEN, KEYBOARD AND DESCRIPTION **********/
-const main = document.createElement('main');
-main.classList.add('main');
-main.classList.add('main-container');
-document.body.append(main);
-
-const textarea = document.createElement('textarea');
-textarea.className = 'textarea';
-textarea.name = 'display';
-textarea.autofocus = true;
-document.body.append(textarea);
-
-const keyboard = document.createElement('div');
-keyboard.className = 'keyboard';
-document.body.append(keyboard);
-
-const guide = document.createElement('p');
-guide.className = 'desc';
-guide.innerHTML = 'Для смены языка нажмите Ctrl + Alt <br> Клавиатура писалась на Linux Ubuntu';
-document.body.append(guide);
-
-const heading = document.createElement('h1');
-heading.textContent = 'RSS Virtual Keyboard';
-main.appendChild(heading);
-main.appendChild(textarea);
-main.appendChild(keyboard);
-main.appendChild(guide);
-
-let langStorage = 'lang';
+const langStorage = 'lang';
 let keys = [];
 
 let isCapsOn = false;
 let isShiftOn = false;
 
+function keyCodeClassName(str) {
+    const x = str.charAt(0).toLowerCase();
+    return x + str.slice(1);
+}
+
 function createButtons(array) {
-    document.querySelectorAll('.key').forEach(el => el.remove());
-    array.forEach(element => {
-        let key = document.createElement('div');
+    document.querySelectorAll('.key').forEach((el) => el.remove());
+    array.forEach((element) => {
+        const key = document.createElement('div');
         key.className = keyCodeClassName(element.keyCode);
         key.classList.add('key');
         key.id = element.keyCode;
@@ -1133,67 +1221,74 @@ function createButtons(array) {
             } else if (isCapsOn === false && isShiftOn === true) {
                 key.innerHTML = element.RU;
             } else if (isCapsOn === true && isShiftOn === false) {
-                key.innerHTML = element.RU;
+                if (element.perceivesCapsLk) {
+                    key.innerHTML = element.RU;
+                } else {
+                    key.innerHTML = element.ru;
+                }
             } else {
                 key.innerHTML = element.ru;
             }
-        } else {
-            if (isCapsOn === false && isShiftOn === false) {
-                key.innerHTML = element.en;
-            } else if (isCapsOn === false && isShiftOn === true) {
-                key.innerHTML = element.EN;
-            } else if (isCapsOn === true && isShiftOn === false) {
+        } else if (isCapsOn === false && isShiftOn === false) {
+            key.innerHTML = element.en;
+        } else if (isCapsOn === false && isShiftOn === true) {
+            key.innerHTML = element.EN;
+        } else if (isCapsOn === true && isShiftOn === false) {
+            if (element.perceivesCapsLk === true) {
                 key.innerHTML = element.EN;
             } else {
                 key.innerHTML = element.en;
             }
+        } else {
+            key.innerHTML = element.en;
         }
-        keyboard.append(key);
+        _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.append(key);
         keys = document.querySelectorAll('.key');
     });
 }
 
-createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
-let keysDown = {};
+const keysDown = {};
 let isControlDown = false;
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (!(event.key in keysDown)) {
         keysDown[event.key] = true;
     }
     event.preventDefault();
-    textarea.focus();
+    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.focus();
 
-    let string = textarea.value;
-    let pos = textarea.selectionStart;
-    let posEnd = textarea.selectionEnd;
+    const string = _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value;
+    const pos = _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart;
+    const posEnd = _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd;
 
-    keys.forEach(el => {
+    keys.forEach((el) => {
         if (el.id === event.code) {
             el.classList.add('active');
             if (el.id === 'Tab') {
-                textarea.value += '\t';
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '    ';
             } else if (el.id === 'CapsLock') {
-                el.classList.add('active');
                 isCapsOn = !isCapsOn;
-                createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+                createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
-                keys.forEach(el => {
-                    if (el.id === event.code) {
+                keys.forEach((el) => {
+                    if (el.id === event.code && isCapsOn) {
                         el.classList.add('active');
                     }
                 });
-            } else if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+            } else if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
                 isShiftOn = true;
-                createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+                createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
-                keys.forEach(el => {
+                keys.forEach((el) => {
                     if (el.id === event.code) {
+                        el.classList.add('active');
+                    } else if (el.id === 'CapsLock' && isCapsOn) {
                         el.classList.add('active');
                     }
                 });
-            } else if (event.code === 'ControlLeft' || event.code === 'ControlRight') {
+            } else if (el.id === 'ControlLeft' || el.id === 'ControlRight') {
                 isControlDown = true;
             } else if (el.id === 'AltLeft' || el.id === 'AltRight') {
                 if (isControlDown === true) {
@@ -1204,53 +1299,57 @@ document.addEventListener('keydown', function(event) {
                         lang = 'ru';
                         localStorage.setItem(langStorage, 'ru');
                     }
-                    createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+                    createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                     keys = document.querySelectorAll('.key');
                 }
             } else if (el.id === 'Enter') {
-                textarea.value += '\n';
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '\n';
             } else if (el.id === 'Delete') {
                 if (pos >= 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(pos + 1, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos) + string.slice(pos + 1, string.length);
                 }
                 if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
                 }
-                textarea.selectionStart = pos;
-                textarea.selectionEnd = pos;
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart = pos;
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd = pos;
             } else if (el.id === 'Backspace') {
                 if (pos > 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos - 1) + string.slice(pos, string.length);
-                    textarea.selectionStart = pos - 1;
-                    textarea.selectionEnd = pos - 1;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos - 1) + string.slice(pos, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart = pos - 1;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd = pos - 1;
                 }
                 if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
-                    textarea.selectionStart = pos;
-                    textarea.selectionEnd = pos;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart = pos;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd = pos;
                 }
             } else {
-                textarea.value += el.textContent;
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += el.textContent;
             }
         }
     });
 });
 
-document.addEventListener('keyup', function(event) {
-
-    keys.forEach(el => {
+document.addEventListener('keyup', function (event) {
+    keys.forEach((el) => {
         if (el.id === event.code) {
             el.classList.remove('active');
+        }
+        if (el.id === 'CapsLock' && isCapsOn) {
+            el.classList.add('active');
         }
     });
 
     if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
         isShiftOn = false;
-        createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+        createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
         keys = document.querySelectorAll('.key');
-        keys.forEach(el => {
+        keys.forEach((el) => {
             if (el.id === event.code) {
                 el.classList.remove('active');
+            } else if (el.id === 'CapsLock' && isCapsOn) {
+                el.classList.add('active');
             }
         });
     }
@@ -1260,87 +1359,79 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
-keyboard.addEventListener('mousedown', function(event) {
+_assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mousedown', function (event) {
     event.preventDefault();
-    textarea.focus();
+    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.focus();
 
-    let string = textarea.value;
-    let pos = textarea.selectionStart;
-    let posEnd = textarea.selectionEnd;
+    const string = _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value;
+    const pos = _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart;
+    const posEnd = _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd;
 
-    keys.forEach(el => {
+    keys.forEach((el) => {
         if (el === event.target) {
             el.classList.add('active');
             if (el.id === 'Tab') {
-                textarea.value += '\t';
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '    ';
             } else if (el.id === 'CapsLock') {
                 isCapsOn = !isCapsOn;
-                createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+                createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
-                keys.forEach(el => {
-                    if (el.id === event.target) {
-                        el.classList.add('active');
-                    }
-                });
             } else if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
                 isShiftOn = true;
-                createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+                createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
-                keys.forEach(el => {
-                    if (el.id === event.target) {
-                        el.classList.add('active');
-                    }
-                });
-            } else if (el.id === 'ControlLeft' || el.id === 'ControlRight' || el.id === 'AltLeft' || el.id === 'AltRight') {
+            } else if (
+                el.id === 'ControlLeft' ||
+                el.id === 'ControlRight' ||
+                el.id === 'AltLeft' ||
+                el.id === 'AltRight'
+            ) {
             } else if (el.id === 'Enter') {
-                textarea.value += '\n';
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '\n';
+            } else if (el.id === 'MetaLeft') {
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += '';
             } else if (el.id === 'Delete') {
                 if (pos >= 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(pos + 1, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos) + string.slice(pos + 1, string.length);
                 }
                 if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
                 }
-                textarea.selectionStart = pos;
-                textarea.selectionEnd = pos;
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart = pos;
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd = pos;
             } else if (el.id === 'Backspace') {
                 if (pos > 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos - 1) + string.slice(pos, string.length);
-                    textarea.selectionStart = pos - 1;
-                    textarea.selectionEnd = pos - 1;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos - 1) + string.slice(pos, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart = pos - 1;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd = pos - 1;
                 }
                 if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
-                    textarea.selectionStart = pos;
-                    textarea.selectionEnd = pos;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionStart = pos;
+                    _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.selectionEnd = pos;
                 }
             } else {
-                textarea.value += el.textContent;
+                _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.value += el.textContent;
             }
         }
     });
 });
 
-keyboard.addEventListener('mouseup', function(event) {
-    keys.forEach(el => {
+_assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mouseup', function (event) {
+    keys.forEach((el) => {
         if (el === event.target) {
             el.classList.remove('active');
             if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
                 isShiftOn = false;
-                createButtons(_assets_js_keyMap_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+                createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
                 keys = document.querySelectorAll('.key');
             }
         }
     });
 });
-
-function keyCodeClassName(str) {
-    let x = str.charAt(0).toLowerCase();
-    return x + str.slice(1);
-}
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.ec7ebab3c324dfb102c1.js.map
+//# sourceMappingURL=main.faae75616d8d08652e01.js.map
