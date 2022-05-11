@@ -17,7 +17,7 @@
   ],
   "ignorePatterns": [
     "webpack.config.js",
-    "public/script.js"
+    "**/public/*.js"
   ],
   "rules": {
     "prettier/prettier": [
@@ -27,7 +27,6 @@
         "singleQuote": true,
         "trailingComma": "all",
         "bracketSpacing": true,
-        "jsxBracketSameLine": false,
         "tabWidth": 4,
         "semi": true
       }
