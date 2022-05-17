@@ -324,7 +324,7 @@ const keyBtn = [
         keyCode: 'Quote',
         ru: 'э',
         RU: 'Э',
-        en: '\'',
+        en: "'",
         EN: '"',
         perceivesCapsLk: true,
     },
@@ -511,7 +511,7 @@ const keyBtn = [
         en: 'Ctrl',
         EN: 'Ctrl',
         perceivesCapsLk: false,
-    }
+    },
 ];
 
 export default keyBtn;

@@ -67,16 +67,17 @@ createButtons(keyBtn);
 const keysDown = {};
 let isControlDown = false;
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event) => {
     if (!(event.key in keysDown)) {
         keysDown[event.key] = true;
     }
     event.preventDefault();
     textarea.focus();
 
-    const string = textarea.value;
-    const pos = textarea.selectionStart;
-    const posEnd = textarea.selectionEnd;
+    let cursorPos = textarea.selectionStart;
+    const cursorPosEnd = textarea.selectionEnd;
+    const left = textarea.value.slice(0, cursorPos);
+    const right = textarea.value.slice(cursorPosEnd);
 
     keys.forEach((el) => {
         if (el.id === event.code) {
@@ -120,24 +121,17 @@ document.addEventListener('keydown', function (event) {
             } else if (el.id === 'Enter') {
                 textarea.value += '\n';
             } else if (el.id === 'Delete') {
-                if (pos >= 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(pos + 1, string.length);
+                if (cursorPos === cursorPosEnd) {
+                    textarea.value = `${left}${right.slice(1)}`;
+                } else {
+                    textarea.value = `${left}${right}`;
                 }
-                if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
-                }
-                textarea.selectionStart = pos;
-                textarea.selectionEnd = pos;
             } else if (el.id === 'Backspace') {
-                if (pos > 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos - 1) + string.slice(pos, string.length);
-                    textarea.selectionStart = pos - 1;
-                    textarea.selectionEnd = pos - 1;
-                }
-                if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
-                    textarea.selectionStart = pos;
-                    textarea.selectionEnd = pos;
+                if (cursorPos === cursorPosEnd) {
+                    textarea.value = `${left.slice(0, -1)}${right}`;
+                    cursorPos -= 1;
+                } else {
+                    textarea.value = `${left}${right}`;
                 }
             } else {
                 textarea.value += el.textContent;
@@ -146,7 +140,7 @@ document.addEventListener('keydown', function (event) {
     });
 });
 
-document.addEventListener('keyup', function (event) {
+document.addEventListener('keyup', (event) => {
     keys.forEach((el) => {
         if (el.id === event.code) {
             el.classList.remove('active');
@@ -174,13 +168,14 @@ document.addEventListener('keyup', function (event) {
     }
 });
 
-keyboard.addEventListener('mousedown', function (event) {
+keyboard.addEventListener('mousedown', (event) => {
     event.preventDefault();
     textarea.focus();
 
-    const string = textarea.value;
-    const pos = textarea.selectionStart;
-    const posEnd = textarea.selectionEnd;
+    let cursorPos = textarea.selectionStart;
+    const cursorPosEnd = textarea.selectionEnd;
+    const left = textarea.value.slice(0, cursorPos);
+    const right = textarea.value.slice(cursorPosEnd);
 
     keys.forEach((el) => {
         if (el === event.target) {
@@ -201,29 +196,23 @@ keyboard.addEventListener('mousedown', function (event) {
                 el.id === 'AltLeft' ||
                 el.id === 'AltRight'
             ) {
+                textarea.value = '';
             } else if (el.id === 'Enter') {
                 textarea.value += '\n';
             } else if (el.id === 'MetaLeft') {
                 textarea.value += '';
             } else if (el.id === 'Delete') {
-                if (pos >= 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(pos + 1, string.length);
+                if (cursorPos === cursorPosEnd) {
+                    textarea.value = `${left}${right.slice(1)}`;
+                } else {
+                    textarea.value = `${left}${right}`;
                 }
-                if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
-                }
-                textarea.selectionStart = pos;
-                textarea.selectionEnd = pos;
             } else if (el.id === 'Backspace') {
-                if (pos > 0 && pos === posEnd) {
-                    textarea.value = string.slice(0, pos - 1) + string.slice(pos, string.length);
-                    textarea.selectionStart = pos - 1;
-                    textarea.selectionEnd = pos - 1;
-                }
-                if (pos !== posEnd) {
-                    textarea.value = string.slice(0, pos) + string.slice(posEnd, string.length);
-                    textarea.selectionStart = pos;
-                    textarea.selectionEnd = pos;
+                if (cursorPos === cursorPosEnd) {
+                    textarea.value = `${left.slice(0, -1)}${right}`;
+                    cursorPos -= 1;
+                } else {
+                    textarea.value = `${left}${right}`;
                 }
             } else {
                 textarea.value += el.textContent;
@@ -232,7 +221,7 @@ keyboard.addEventListener('mousedown', function (event) {
     });
 });
 
-keyboard.addEventListener('mouseup', function (event) {
+keyboard.addEventListener('mouseup', (event) => {
     keys.forEach((el) => {
         if (el === event.target) {
             el.classList.remove('active');
