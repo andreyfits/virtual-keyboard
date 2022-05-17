@@ -1,235 +1,170 @@
 import './style.scss';
-import keyBtn from './assets/js/keyMap';
-import { textarea, keyboard } from './assets/js/layout';
 
-let lang;
-
-if (localStorage.getItem('lang') === 'en') {
-    lang = 'en';
-} else if (localStorage.getItem('lang') === 'ru') {
-    lang = 'ru';
-} else {
-    lang = 'en';
-}
-
-const langStorage = 'lang';
-let keys = [];
-
-let isCapsOn = false;
-let isShiftOn = false;
-
-function keyCodeClassName(str) {
-    const x = str.charAt(0).toLowerCase();
-    return x + str.slice(1);
-}
-
-function createButtons(array) {
-    document.querySelectorAll('.key').forEach((el) => el.remove());
-    array.forEach((element) => {
-        const key = document.createElement('div');
-        key.className = keyCodeClassName(element.keyCode);
-        key.classList.add('key');
-        key.id = element.keyCode;
-        if (lang === 'ru') {
-            if (isCapsOn === false && isShiftOn === false) {
-                key.innerHTML = element.ru;
-            } else if (isCapsOn === false && isShiftOn === true) {
-                key.innerHTML = element.RU;
-            } else if (isCapsOn === true && isShiftOn === false) {
-                if (element.perceivesCapsLk) {
-                    key.innerHTML = element.RU;
-                } else {
-                    key.innerHTML = element.ru;
-                }
-            } else {
-                key.innerHTML = element.ru;
-            }
-        } else if (isCapsOn === false && isShiftOn === false) {
-            key.innerHTML = element.en;
-        } else if (isCapsOn === false && isShiftOn === true) {
-            key.innerHTML = element.EN;
-        } else if (isCapsOn === true && isShiftOn === false) {
-            if (element.perceivesCapsLk === true) {
-                key.innerHTML = element.EN;
-            } else {
-                key.innerHTML = element.en;
-            }
-        } else {
-            key.innerHTML = element.en;
-        }
-        keyboard.append(key);
-        keys = document.querySelectorAll('.key');
-    });
-}
-
-createButtons(keyBtn);
-
-const keysDown = {};
-let isControlDown = false;
-
-document.addEventListener('keydown', (event) => {
-    if (!(event.key in keysDown)) {
-        keysDown[event.key] = true;
+class Keyboard {
+    constructor(keys) {
+        this.keysElement = keys;
+        this.keyboard = null;
+        this.textarea = null;
+        this.isCapsOn = false;
+        this.isDown = false;
+        this.layout = localStorage.getItem('lang') === 'ru' ? 'ru' : 'en';
+        this.keys = [];
     }
-    event.preventDefault();
-    textarea.focus();
 
-    let cursorPos = textarea.selectionStart;
-    const cursorPosEnd = textarea.selectionEnd;
-    const left = textarea.value.slice(0, cursorPos);
-    const right = textarea.value.slice(cursorPosEnd);
+    renderHtmlElements() {
+        const main = document.createElement('main');
+        const textarea = document.createElement('textarea');
+        const keyboard = document.createElement('div');
+        const guide = document.createElement('p');
+        const heading = document.createElement('h1');
 
-    keys.forEach((el) => {
-        if (el.id === event.code) {
-            el.classList.add('active');
-            if (el.id === 'Tab') {
-                textarea.value += '\t';
-            } else if (el.id === 'CapsLock') {
-                isCapsOn = !isCapsOn;
-                createButtons(keyBtn);
-                keys = document.querySelectorAll('.key');
-                keys.forEach((elem) => {
-                    if (elem.id === event.code && isCapsOn) {
-                        elem.classList.add('active');
-                    }
-                });
-            } else if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
-                isShiftOn = true;
-                createButtons(keyBtn);
-                keys = document.querySelectorAll('.key');
-                keys.forEach((elem) => {
-                    if (elem.id === event.code) {
-                        elem.classList.add('active');
-                    } else if (elem.id === 'CapsLock' && isCapsOn) {
-                        elem.classList.add('active');
-                    }
-                });
-            } else if (el.id === 'ControlLeft' || el.id === 'ControlRight') {
-                isControlDown = true;
-            } else if (el.id === 'AltLeft' || el.id === 'AltRight') {
-                if (isControlDown === true) {
-                    if (lang === 'ru') {
-                        lang = 'en';
-                        localStorage.setItem(langStorage, 'en');
-                    } else {
-                        lang = 'ru';
-                        localStorage.setItem(langStorage, 'ru');
-                    }
-                    createButtons(keyBtn);
-                    keys = document.querySelectorAll('.key');
-                }
-            } else if (el.id === 'Enter') {
-                textarea.value += '\n';
-            } else if (el.id === 'Delete') {
-                if (cursorPos === cursorPosEnd) {
-                    textarea.value = `${left}${right.slice(1)}`;
-                } else {
-                    textarea.value = `${left}${right}`;
-                }
-            } else if (el.id === 'Backspace') {
-                if (cursorPos === cursorPosEnd) {
-                    textarea.value = `${left.slice(0, -1)}${right}`;
-                    cursorPos -= 1;
-                } else {
-                    textarea.value = `${left}${right}`;
-                }
-            } else {
-                textarea.value += el.textContent;
-            }
-        }
-    });
-});
+        main.classList.add('main');
+        main.classList.add('main-container');
 
-document.addEventListener('keyup', (event) => {
-    keys.forEach((el) => {
-        if (el.id === event.code) {
-            el.classList.remove('active');
-        }
-        if (el.id === 'CapsLock' && isCapsOn) {
-            el.classList.add('active');
-        }
-    });
+        heading.textContent = 'RSS Virtual keyboard ';
+        guide.innerText = 'To change the language, press Ctrl + Alt\nThe keyboard was written on Linux Ubuntu';
 
-    if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
-        isShiftOn = false;
-        createButtons(keyBtn);
-        keys = document.querySelectorAll('.key');
-        keys.forEach((el) => {
-            if (el.id === event.code) {
-                el.classList.remove('active');
-            } else if (el.id === 'CapsLock' && isCapsOn) {
-                el.classList.add('active');
-            }
+        main.appendChild(heading);
+        main.appendChild(textarea);
+        main.appendChild(keyboard);
+        main.appendChild(guide);
+        document.body.appendChild(main);
+
+        this.keyboard = keyboard;
+        this.textarea = textarea;
+    }
+
+    renderKeyboard() {
+        this.keyboard.classList.add('keyboard');
+        this.keysElement.forEach((key) => {
+            const keyButton = document.createElement('button');
+            keyButton.setAttribute('id', key.code);
+            keyButton.setAttribute('type', 'button');
+            keyButton.setAttribute('character-en', key.character.en);
+            keyButton.setAttribute('character-ru', key.character.ru);
+            keyButton.setAttribute('contents-en', key.contents.en);
+            keyButton.setAttribute('contents-ru', key.contents.ru);
+            keyButton.setAttribute('shift-en', key.shift.en);
+            keyButton.setAttribute('shift-ru', key.shift.ru);
+            keyButton.classList.add('key', key.code);
+            keyButton.textContent = this.layout === 'en' ? key.contents.en : key.contents.ru;
+            this.keyboard.appendChild(keyButton);
+            this.keys.push(keyButton);
         });
     }
 
-    if (event.code === 'ControlLeft' || event.code === 'ControlRight') {
-        isControlDown = false;
+    addListeners() {
+        document.addEventListener('keydown', (keyEvent) => {
+            const key = document.getElementById(keyEvent.code);
+            if (key) {
+                key.classList.add('active');
+                keyEvent.preventDefault();
+                const characterEn = key.getAttribute('character-en');
+                if ((keyEvent.code === 'ShiftLeft' || keyEvent.code === 'ShiftRight') && !keyEvent.repeat)
+                    this.shiftText(true);
+                else if (keyEvent.code === 'CapsLock' && !keyEvent.repeat) {
+                    this.shiftText(false);
+                    if (this.isCapsOn) key.classList.remove('active');
+                    this.isCapsOn = !this.isCapsOn;
+                } else if (keyEvent.ctrlKey && keyEvent.altKey) {
+                    this.layout = this.layout === 'ru' ? 'en' : 'ru';
+                    localStorage.setItem('lang', this.layout);
+                    this.keys.forEach((keys) => {
+                        if (this.layout === 'en') {
+                            const getLang = keys;
+                            getLang.innerText = keys.getAttribute('contents-en');
+                        } else if (this.layout === 'ru') {
+                            const getLang = keys;
+                            getLang.innerText = keys.getAttribute('contents-ru');
+                        }
+                    });
+                } else if (keyEvent.code === 'Backspace') this.handleText('', 'Backspace');
+                else if (keyEvent.code === 'Delete') this.handleText('', 'Delete');
+                else if (keyEvent.code === 'Enter') this.handleText('\n');
+                else if (keyEvent.code === 'Tab') this.handleText('\t');
+                else if (characterEn !== 'functional') this.handleText(key.textContent);
+            }
+        });
+
+        document.addEventListener('keyup', (keyEvent) => {
+            const key = document.getElementById(keyEvent.code);
+            if (key) {
+                if (keyEvent.code !== 'CapsLock') key.classList.remove('active');
+                if (keyEvent.code === 'ShiftLeft' || keyEvent.code === 'ShiftRight') this.shiftText(true);
+            }
+        });
+
+        this.keyboard.addEventListener('mousedown', (event) => {
+            const eventKeyDown = new KeyboardEvent('keydown', {
+                code: event.target.id,
+            });
+            document.dispatchEvent(eventKeyDown);
+            this.isDown = true;
+        });
+
+        this.keyboard.addEventListener('mouseup', (event) => {
+            const eventKeyUp = new KeyboardEvent('keyup', { code: event.target.id });
+            document.dispatchEvent(eventKeyUp);
+            this.isDown = false;
+        });
+
+        this.keyboard.addEventListener('mouseout', (event) => {
+            if (this.isDown) {
+                const eventKeyUp = new KeyboardEvent('keyup', {
+                    code: event.target.id,
+                });
+                document.dispatchEvent(eventKeyUp);
+            }
+        });
+
+        this.textarea.onblur = () => this.textarea.focus();
+        this.textarea.focus();
     }
-});
 
-keyboard.addEventListener('mousedown', (event) => {
-    event.preventDefault();
-    textarea.focus();
-
-    let cursorPos = textarea.selectionStart;
-    const cursorPosEnd = textarea.selectionEnd;
-    const left = textarea.value.slice(0, cursorPos);
-    const right = textarea.value.slice(cursorPosEnd);
-
-    keys.forEach((el) => {
-        if (el === event.target) {
-            el.classList.add('active');
-            if (el.id === 'Tab') {
-                textarea.value += '\t';
-            } else if (el.id === 'CapsLock') {
-                isCapsOn = !isCapsOn;
-                createButtons(keyBtn);
-                keys = document.querySelectorAll('.key');
-            } else if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
-                isShiftOn = true;
-                createButtons(keyBtn);
-                keys = document.querySelectorAll('.key');
-            } else if (
-                el.id === 'ControlLeft' ||
-                el.id === 'ControlRight' ||
-                el.id === 'AltLeft' ||
-                el.id === 'AltRight'
-            ) {
-                textarea.value = '';
-            } else if (el.id === 'Enter') {
-                textarea.value += '\n';
-            } else if (el.id === 'MetaLeft') {
-                textarea.value += '';
-            } else if (el.id === 'Delete') {
-                if (cursorPos === cursorPosEnd) {
-                    textarea.value = `${left}${right.slice(1)}`;
-                } else {
-                    textarea.value = `${left}${right}`;
-                }
-            } else if (el.id === 'Backspace') {
-                if (cursorPos === cursorPosEnd) {
-                    textarea.value = `${left.slice(0, -1)}${right}`;
-                    cursorPos -= 1;
-                } else {
-                    textarea.value = `${left}${right}`;
-                }
-            } else {
-                textarea.value += el.textContent;
-            }
+    handleText(text, param) {
+        let cursorPos = this.textarea.selectionStart;
+        let cursorPosEnd = this.textarea.selectionEnd;
+        if (this.textarea.selectionStart === this.textarea.selectionEnd) {
+            if (param === 'Delete') cursorPosEnd += 1;
+            else if (param === 'Backspace') cursorPos = Math.max(0, cursorPos - 1);
         }
-    });
-});
 
-keyboard.addEventListener('mouseup', (event) => {
-    keys.forEach((el) => {
-        if (el === event.target) {
-            el.classList.remove('active');
-            if (el.id === 'ShiftLeft' || el.id === 'ShiftRight') {
-                isShiftOn = false;
-                createButtons(keyBtn);
-                keys = document.querySelectorAll('.key');
+        if (param === 'Delete' || param === 'Backspace') {
+            this.textarea.setRangeText('', cursorPos, cursorPosEnd);
+        } else this.textarea.setRangeText(text);
+
+        this.textarea.selectionStart = cursorPos + text.length;
+        this.textarea.selectionEnd = this.textarea.selectionStart;
+    }
+
+    shiftText(noCapsKey) {
+        this.keys.forEach((keys) => {
+            const key = keys;
+            if (noCapsKey || key.getAttribute('character-en') === 'letter') {
+                const temp = key.getAttribute('contents-en');
+                key.setAttribute('contents-en', key.getAttribute('shift-en'));
+                key.setAttribute('shift-en', temp);
             }
-        }
-    });
+            if (noCapsKey || key.getAttribute('character-ru') === 'letter') {
+                const temp = key.getAttribute('contents-ru');
+                key.setAttribute('contents-ru', key.getAttribute('shift-ru'));
+                key.setAttribute('shift-ru', temp);
+            }
+            key.innerText = this.layout === 'en' ? key.getAttribute('contents-en') : key.getAttribute('contents-ru');
+        });
+    }
+}
+
+const getKeysConfig = async () => {
+    const url = './assets/data/keys.json';
+    const res = await fetch(url);
+    return res.json();
+};
+
+window.addEventListener('DOMContentLoaded', async () => {
+    const keysConfig = await getKeysConfig();
+    const keyboard = new Keyboard(keysConfig);
+    keyboard.renderHtmlElements();
+    keyboard.renderKeyboard();
+    keyboard.addListeners();
 });

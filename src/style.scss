@@ -27,7 +27,7 @@ body {
   gap: 18px;
   justify-content: center;
 
-  .textarea {
+  textarea {
     width: 100%;
     height: 300px;
     margin: 0 auto;
@@ -71,21 +71,21 @@ body {
         color: #112691;
       }
 
-      &.backspace,
-      &.shiftLeft,
-      &.shiftRight,
-      &.capsLock,
-      &.enter {
+      &.Backspace,
+      &.ShiftLeft,
+      &.ShiftRight,
+      &.CapsLock,
+      &.Enter {
         width: 87px;
       }
 
-      &.space {
+      &.Space {
         width: 40px * 7 + 7px * 6;
       }
-
-      &.guide {
-        font-size: 27px;
-      }
     }
+  }
+
+  p {
+    font-size: 22px;
   }
 }
