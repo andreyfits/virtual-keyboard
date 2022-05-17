@@ -1252,7 +1252,7 @@ createButtons(_assets_js_keyMap__WEBPACK_IMPORTED_MODULE_1__["default"]);
 const keysDown = {};
 let isControlDown = false;
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event) => {
     if (!(event.key in keysDown)) {
         keysDown[event.key] = true;
     }
@@ -1331,7 +1331,7 @@ document.addEventListener('keydown', function (event) {
     });
 });
 
-document.addEventListener('keyup', function (event) {
+document.addEventListener('keyup', (event) => {
     keys.forEach((el) => {
         if (el.id === event.code) {
             el.classList.remove('active');
@@ -1359,7 +1359,7 @@ document.addEventListener('keyup', function (event) {
     }
 });
 
-_assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mousedown', function (event) {
+_assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mousedown', (event) => {
     event.preventDefault();
     _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.textarea.focus();
 
@@ -1417,7 +1417,7 @@ _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('moused
     });
 });
 
-_assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mouseup', function (event) {
+_assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mouseup', (event) => {
     keys.forEach((el) => {
         if (el === event.target) {
             el.classList.remove('active');
@@ -1434,4 +1434,4 @@ _assets_js_layout__WEBPACK_IMPORTED_MODULE_2__.keyboard.addEventListener('mouseu
 
 /******/ })()
 ;
-//# sourceMappingURL=main.636b9c0ad01867a9e71e.js.map
+//# sourceMappingURL=main.0b17aca1737f8f26afb7.js.map
