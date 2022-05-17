@@ -1,6 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const JsonMinimizerPlugin = require('json-minimizer-webpack-plugin');
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 let mode = 'development';
 
@@ -25,14 +29,20 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.json$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /[\\/]node_modules[\\/]/,
+            },
         ],
     },
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: '[name].[contenthash].js',
-        clean: {
-            keep: /\.git/,
-        },
+        clean: true,
     },
     devServer: {
         open: true,
@@ -50,5 +60,21 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
         }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'src/*.json', to: 'keys.json' },
+            ],
+        }),
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new JsonMinimizerPlugin(),
+            new HtmlMinimizerPlugin(),
+            new TerserPlugin({
+                test: /\.js(\?.*)?$/i,
+                parallel: true,
+            }),
+        ],
+    },
 };
