@@ -156,7 +156,7 @@ class Keyboard {
 }
 
 const getKeysConfig = async () => {
-    const url = './assets/data/keys.json';
+    const url = 'keys.json';
     const res = await fetch(url);
     return res.json();
 };
